@@ -76,9 +76,9 @@ npm run build
 ```
 
 ## Preview
-Live Demo:
+Live demo:
 
-##Author
+## Author
 Varun Singh
 Full Stack Developer | AI & Automation Enthusiast
 Reach out: the.varun216@gmail.com

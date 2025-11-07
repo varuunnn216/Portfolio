@@ -76,7 +76,7 @@ npm run build
 ```
 
 ## Preview
-Live demo:
+Live demo: https://varun-singh.vercel.app/
 
 ## Author
 Varun Singh

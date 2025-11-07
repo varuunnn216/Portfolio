@@ -39,10 +39,15 @@ This portfolio is a reflection of my work, projects, and software engineering ph
 
 src/
 ┣ 📁 assets/ # Images, icons, and static assets
+
 ┣ 📁 components/ # Reusable UI components (Navbar, GradientBlinds, PillNav, etc.)
+
 ┣ 📁 pages/ # Main app pages (About, Skills, Projects, Contact, ProfileSelect)
+
 ┣ 📄 App.jsx # Main React component with routing
+
 ┣ 📄 main.jsx # ReactDOM entry
+
 ┗ 📄 index.css # Tailwind base + custom global styles
 
 ---
@@ -53,5 +58,28 @@ src/
 ```bash
 git clone https://github.com/varuunnn216/portfolio.git
 cd portfolio
+```
 
+### 2️⃣ Install dependencies
+```bash
+npm install
+```
+
+### 3️⃣ Run the development server
+```bash
+npm run dev
+```
+
+### 4️⃣ Build for production
+```bash
+npm run build
+```
+
+## Preview
+Live Demo:
+
+##Author
+Varun Singh
+Full Stack Developer | AI & Automation Enthusiast
+Reach out: the.varun216@gmail.com
 

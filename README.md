@@ -1,12 +1,12 @@
-🌐 Varun Singh — Developer Portfolio
+#🌐 Varun Singh — Developer Portfolio
 
 Welcome to my personal developer portfolio, a fully responsive and interactive web experience built using React.js and Tailwind CSS, inspired by the visual aesthetics of Netflix and the smoothness of modern animation frameworks.
 
 This portfolio is a reflection of my work, projects, and software engineering philosophy — combining clean code, powerful visuals, and smooth user experience.
 
-🚀 Tech Stack
+##🚀 Tech Stack
 
-Frontend:
+**Frontend:**
 
 ⚛️ React.js (Functional Components + Hooks)
 
@@ -18,33 +18,33 @@ Frontend:
 
 🌈 Dynamic UI elements with responsive scaling and transitions
 
-Build & Deployment:
+##Build & Deployment:
 
 🧱 Vite (Lightning-fast React environment)
 
 ☁️ Deployable on Netlify / Vercel / GitHub Pages
 
-🧠 Features
+##🧠 Features
 
-🎬 Netflix-inspired Interface – Interactive profile selector with 3D lighting & smooth transitions.s
+**🎬 Netflix-inspired Interface** – Interactive profile selector with 3D lighting & smooth transitions.s
 
-💻 Dynamic Pages:
+**💻 Dynamic Pages:**
 
-About – Highlights my journey as a software engineer.
+**About** – Highlights my journey as a software engineer.
 
-Skills – Showcases my tech stack with an animated gradient background.
+**Skills** – Showcases my tech stack with an animated gradient background.
 
-Projects – Organized and optimized project cards with lazy-loaded images.
+**Projects** – Organized and optimized project cards with lazy-loaded images.
 
-Contact – Integrated with Formspree for direct message delivery.
+**Contact** – Integrated with Formspree for direct message delivery.
 
-🧭 Custom GSAP-based Pill Navigation – A stylish, glowing navigation bar with hover transitions.
+🧭 **Custom GSAP-based Pill Navigation** – A stylish, glowing navigation bar with hover transitions.
 
-⚡ Optimized Performance – Lazy image loading, deferred decoding, and responsive rendering.
+⚡ **Optimized Performance** – Lazy image loading, deferred decoding, and responsive rendering.
 
-🔥 Fully Responsive – Works seamlessly across all screen sizes.
+🔥 **Fully Responsive** – Works seamlessly across all screen sizes.
 
-📂 Folder Structure
+##📂 Folder Structure
 
 src/
 ┣ 📁 assets/ # Images, icons, and static assets
@@ -55,30 +55,30 @@ src/
 ┗ 📄 index.css # Tailwind base + custom global styles
 
 
-🧰 Installation & Setup
+##🧰 Installation & Setup
 
-1️⃣ Clone the repository
+###1️⃣ Clone the repository
 
 git clone [https://github.com/varuunnn216/portfolio.git](https://github.com/varuunnn216/portfolio.git)
 cd portfolio
 
 
-2️⃣ Install dependencies
+###2️⃣ Install dependencies
 
 npm install
 
 
-3️⃣ Run the development server
+###3️⃣ Run the development server
 
 npm run dev
 
 
-4️⃣ Build for production
+###4️⃣ Build for production
 
 npm run build
 
 
-📬 Contact Integration
+###📬 Contact Integration
 
 This project uses Formspree for contact form submissions.
 You can configure it by replacing your unique endpoint in Contact.jsx:
@@ -86,27 +86,23 @@ You can configure it by replacing your unique endpoint in Contact.jsx:
 <form action="[https://formspree.io/f/xkgpjkqv](https://formspree.io/f/xkgpjkqv)" method="POST">
 
 
-🖼️ Preview
+##🖼️ Preview
 
 (Once deployed, add a live preview screenshot or GIF here!)
 
-🔗 Live Demo: https://your-portfolio.vercel.app
+🔗 Live Demo: 
 
-👨‍💻 Author
+###👨‍💻 Author
 
 Varun Singh
 Full Stack Developer | AI & Automation Enthusiast
 
-💼 LinkedIn
-
-🐙 GitHub
-
-📧 Reach out: varun.singh@example.com (replace with your real email)
+📧 Reach out: the.varun216@gmail.com
 
 ⭐️ If you like this portfolio
 Give it a star on GitHub 🌟 — it helps others discover it and motivates me to keep improving!
 
-🏁 Future Enhancements
+###🏁 Future Enhancements
 
 🌐 Dark/light theme toggle
 

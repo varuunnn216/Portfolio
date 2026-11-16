@@ -403,14 +403,71 @@ export default function App() {
         </section>
 
         <div className="mx-auto max-w-5xl px-4 sm:px-6">
-          {/* About (short 3-line summary right after hero) */}
-          <section id="about" aria-labelledby="about-heading" className="py-10 border-b border-border">
-            <h2 id="about-heading" className="font-mono text-xs uppercase tracking-wider text-muted mb-2.5">
+          {/* About */}
+          <section id="about" aria-labelledby="about-heading" className="py-14 border-b border-border">
+            <h2
+              id="about-heading"
+              data-reveal
+              className="font-mono text-xs uppercase tracking-wider text-muted mb-4"
+            >
               About
             </h2>
-            <p className="max-w-3xl text-sm sm:text-base text-ink/90 leading-relaxed">
-              {PROFILE.about}
-            </p>
+            <div className="grid grid-cols-1 lg:grid-cols-[1fr_460px] gap-8 items-start">
+              <p
+                data-reveal
+                className="max-w-[65ch] text-base sm:text-[17px] text-ink/90 leading-[1.7] lg:pb-10"
+              >
+                {PROFILE.about}
+              </p>
+
+              <aside
+                aria-label="At a glance"
+                data-reveal
+                data-reveal-delay={90}
+                className="w-full rounded-[16px] border border-border bg-surface overflow-hidden"
+              >
+                <dl className="grid grid-cols-1 min-[560px]:grid-cols-2 auto-rows-auto content-start gap-px bg-border">
+                  <div className="bg-surface p-5 flex flex-col justify-start">
+                    <dt className="font-mono text-[11px] leading-none uppercase tracking-[0.06em] text-muted">
+                      Location
+                    </dt>
+                    <dd className="mt-3 text-[16px] font-semibold leading-snug text-ink">
+                      Hyderabad, India
+                    </dd>
+                  </div>
+
+                  <div className="bg-surface p-5 flex flex-col justify-start">
+                    <dt className="font-mono text-[11px] leading-none uppercase tracking-[0.06em] text-muted">
+                      Experience
+                    </dt>
+                    <dd className="mt-3 text-[16px] font-semibold leading-snug text-ink">
+                      3+ years, <span className="whitespace-nowrap">full-stack</span>
+                    </dd>
+                  </div>
+
+                  <div className="bg-surface p-5 flex flex-col justify-start">
+                    <dt className="font-mono text-[11px] leading-none uppercase tracking-[0.06em] text-muted">
+                      Current
+                    </dt>
+                    <dd className="mt-3 text-[16px] font-semibold leading-snug text-ink">
+                      AI in SDLC team, Accenture
+                      <span className="block mt-1 text-xs font-normal text-muted">
+                        since Feb 2026
+                      </span>
+                    </dd>
+                  </div>
+
+                  <div className="bg-surface p-5 flex flex-col justify-start">
+                    <dt className="font-mono text-[11px] leading-none uppercase tracking-[0.06em] text-muted">
+                      Focus
+                    </dt>
+                    <dd className="mt-3 text-[16px] font-semibold leading-snug text-ink">
+                      RAG, MCP and <span className="whitespace-nowrap">tool-using</span> agents
+                    </dd>
+                  </div>
+                </dl>
+              </aside>
+            </div>
           </section>
 
           {/* 2. Featured Projects */}

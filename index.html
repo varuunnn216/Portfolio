@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Varun Singh | AI Engineer and Full-Stack Developer</title>
+    <meta
+      name="description"
+      content="Software engineer building agentic AI systems: RAG, MCP and tool-using agents. Python, TypeScript, React. Hyderabad."
+    />
+    <link rel="canonical" href="https://varun-singh.vercel.app/" />
+
+    <!-- Theme color -->
+    <meta name="theme-color" content="#09090B" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://varun-singh.vercel.app/" />
+    <meta property="og:title" content="Varun Singh | AI Engineer and Full-Stack Developer" />
+    <meta
+      property="og:description"
+      content="Software engineer building agentic AI systems: RAG, MCP and tool-using agents. Python, TypeScript, React. Hyderabad."
+    />
+    <meta property="og:image" content="https://varun-singh.vercel.app/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Varun Singh — Software engineer building agentic AI systems" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Varun Singh | AI Engineer and Full-Stack Developer" />
+    <meta
+      name="twitter:description"
+      content="Software engineer building agentic AI systems: RAG, MCP and tool-using agents. Python, TypeScript, React. Hyderabad."
+    />
+    <meta name="twitter:image" content="https://varun-singh.vercel.app/og-image.png" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Varun Singh",
+        "jobTitle": "AI Engineer and Full-Stack Developer",
+        "url": "https://varun-singh.vercel.app/",
+        "email": "mailto:the.varun216@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Hyderabad",
+          "addressCountry": "IN"
+        },
+        "sameAs": [
+          "https://github.com/varuunnn216",
+          "https://linkedin.com/in/varuunnn216"
+        ]
+      }
+    </script>
+
+    <!-- Prevent flash of wrong theme -->
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("theme");
+          var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+          var theme = saved === "light" || saved === "dark" ? saved : prefersDark ? "dark" : "light";
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (e) {
+          document.documentElement.setAttribute("data-theme", "dark");
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"><!--app-html--></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

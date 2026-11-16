@@ -1,3 +1,126 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root,
+[data-theme="dark"] {
+  --color-bg: #09090b;
+  --color-surface: #111113;
+  --color-surface-2: #18181b;
+  --color-border: #27272a;
+  --color-text: #fafafa;
+  --color-muted: #a1a1aa;
+  --color-accent: #e4e4e7;
+  --spotlight-color: rgba(255, 255, 255, 0.06);
+  color-scheme: dark;
+}
+
+[data-theme="light"] {
+  --color-bg: #fafafa;
+  --color-surface: #ffffff;
+  --color-surface-2: #f4f4f5;
+  --color-border: #e4e4e7;
+  --color-text: #09090b;
+  --color-muted: #52525b;
+  --color-accent: #18181b;
+  --spotlight-color: rgba(9, 9, 11, 0.045);
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --color-bg: #fafafa;
+    --color-surface: #ffffff;
+    --color-surface-2: #f4f4f5;
+    --color-border: #e4e4e7;
+    --color-text: #09090b;
+    --color-muted: #52525b;
+    --color-accent: #18181b;
+    --spotlight-color: rgba(9, 9, 11, 0.045);
+    color-scheme: light;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Subtle hero name entrance (keep opacity: 1 so LCP is immediate) */
+@keyframes hero-enter {
+  from {
+    transform: translateY(6px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.hero-name-animate {
+  animation: hero-enter 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Scroll reveal: always readable, subtle entrance settle */
+.reveal-init {
+  opacity: 0.92;
+  transform: translateY(8px);
+  transition: opacity 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-init.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Spotlight hover on project cards */
+.spotlight-card {
+  position: relative;
+}
+
+.spotlight-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  background: radial-gradient(
+    520px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    var(--spotlight-color),
+    transparent 65%
+  );
+}
+
+.spotlight-card:hover::before {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .hero-name-animate {
+    animation: none;
+  }
+  .reveal-init,
+  .reveal-init.is-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .spotlight-card::before {
+    display: none;
+  }
+}

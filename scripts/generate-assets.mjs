@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { Resvg } from "@resvg/resvg-js";
 
-const siteUrl = (process.env.SITE_URL || process.env.VITE_SITE_URL || "https://varun-singh.vercel.app").replace(/\/$/, "");
+const siteUrl = (process.env.SITE_URL || process.env.VITE_SITE_URL || "https://varun-singh-portfolio.vercel.app").replace(/\/$/, "");
 const siteHost = siteUrl.replace(/^https?:\/\//, "");
 
 const publicDir = path.resolve(process.cwd(), "public");

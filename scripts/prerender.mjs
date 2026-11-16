@@ -39,7 +39,7 @@ if (fontPreloads) {
   template = template.replace("</head>", `${fontPreloads}\n  </head>`);
 }
 
-const siteUrl = (process.env.SITE_URL || process.env.VITE_SITE_URL || "https://varun-singh.vercel.app").replace(/\/$/, "");
+const siteUrl = (process.env.SITE_URL || process.env.VITE_SITE_URL || "https://varun-singh-portfolio.vercel.app").replace(/\/$/, "");
 const html = template
   .replaceAll("__SITE_URL__", siteUrl)
   .replace("<!--app-html-->", appHtml);

@@ -4,7 +4,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
 const hasResume = fs.existsSync(path.resolve(process.cwd(), "public/resume.pdf"));
-const siteUrl = (process.env.SITE_URL || process.env.VITE_SITE_URL || "https://varun-singh.vercel.app").replace(/\/$/, "");
+const siteUrl = (process.env.SITE_URL || process.env.VITE_SITE_URL || "https://varun-singh-portfolio.vercel.app").replace(/\/$/, "");
 
 export default defineConfig({
   plugins: [react()],

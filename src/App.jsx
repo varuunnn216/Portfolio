@@ -412,10 +412,10 @@ export default function App() {
             >
               About
             </h2>
-            <div className="grid grid-cols-1 lg:grid-cols-[3fr_2fr] gap-8 items-start">
+            <div className="grid grid-cols-1 lg:grid-cols-[1fr_460px] gap-8 items-start">
               <p
                 data-reveal
-                className="max-w-[65ch] text-sm sm:text-base text-ink/90 leading-relaxed"
+                className="max-w-[65ch] text-base sm:text-[17px] text-ink/90 leading-[1.85]"
               >
                 {PROFILE.about}
               </p>
@@ -424,29 +424,46 @@ export default function App() {
                 aria-label="At a glance"
                 data-reveal
                 data-reveal-delay={90}
-                className="w-full rounded-[16px] border border-border bg-surface p-6"
+                className="w-full rounded-[16px] border border-border bg-surface overflow-hidden"
               >
-                <h3 className="font-mono text-xs uppercase tracking-wider text-muted mb-4">
-                  At a glance
-                </h3>
-                <dl className="space-y-3 text-sm">
-                  <div className="flex items-baseline justify-between gap-4">
-                    <dt className="font-mono text-xs text-muted shrink-0">Location</dt>
-                    <dd className="text-right text-ink">Hyderabad, India</dd>
-                  </div>
-                  <div className="flex items-baseline justify-between gap-4">
-                    <dt className="font-mono text-xs text-muted shrink-0">Experience</dt>
-                    <dd className="text-right text-ink">3+ years, full-stack</dd>
-                  </div>
-                  <div className="flex items-baseline justify-between gap-4">
-                    <dt className="font-mono text-xs text-muted shrink-0">Current</dt>
-                    <dd className="text-right text-ink">
-                      AI in SDLC team, Accenture (since Feb 2026)
+                <dl className="grid grid-cols-1 min-[560px]:grid-cols-2 auto-rows-fr gap-px bg-border">
+                  <div className="bg-surface p-5 flex flex-col justify-start">
+                    <dt className="font-mono text-[11px] leading-none uppercase tracking-[0.06em] text-muted">
+                      Location
+                    </dt>
+                    <dd className="mt-4 text-[16px] font-semibold leading-snug text-ink">
+                      Hyderabad, India
                     </dd>
                   </div>
-                  <div className="flex items-baseline justify-between gap-4">
-                    <dt className="font-mono text-xs text-muted shrink-0">Focus</dt>
-                    <dd className="text-right text-ink">RAG, MCP and tool-using agents</dd>
+
+                  <div className="bg-surface p-5 flex flex-col justify-start">
+                    <dt className="font-mono text-[11px] leading-none uppercase tracking-[0.06em] text-muted">
+                      Experience
+                    </dt>
+                    <dd className="mt-4 text-[16px] font-semibold leading-snug text-ink">
+                      3+ years, full-stack
+                    </dd>
+                  </div>
+
+                  <div className="bg-surface p-5 flex flex-col justify-start">
+                    <dt className="font-mono text-[11px] leading-none uppercase tracking-[0.06em] text-muted">
+                      Current
+                    </dt>
+                    <dd className="mt-4 text-[16px] font-semibold leading-snug text-ink">
+                      AI in SDLC team, Accenture
+                      <span className="block mt-1 text-xs font-normal text-muted">
+                        since Feb 2026
+                      </span>
+                    </dd>
+                  </div>
+
+                  <div className="bg-surface p-5 flex flex-col justify-start">
+                    <dt className="font-mono text-[11px] leading-none uppercase tracking-[0.06em] text-muted">
+                      Focus
+                    </dt>
+                    <dd className="mt-4 text-[16px] font-semibold leading-snug text-ink">
+                      RAG, MCP and tool-using agents
+                    </dd>
                   </div>
                 </dl>
               </aside>

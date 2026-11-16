@@ -13,6 +13,7 @@
     "@fontsource/jetbrains-mono": "^5.2.5",
     "@fontsource/plus-jakarta-sans": "^5.2.5",
     "lucide-react": "^0.548.0",
+    "ogl": "^1.0.11",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-router-dom": "^7.9.4"

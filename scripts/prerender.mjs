@@ -39,6 +39,9 @@ if (fontPreloads) {
   template = template.replace("</head>", `${fontPreloads}\n  </head>`);
 }
 
-const html = template.replace("<!--app-html-->", appHtml);
+const siteUrl = (process.env.SITE_URL || process.env.VITE_SITE_URL || "https://varun-singh.vercel.app").replace(/\/$/, "");
+const html = template
+  .replaceAll("__SITE_URL__", siteUrl)
+  .replace("<!--app-html-->", appHtml);
 fs.writeFileSync(templatePath, html, "utf-8");
 console.log("Prerendered dist/index.html successfully.");

@@ -403,14 +403,54 @@ export default function App() {
         </section>
 
         <div className="mx-auto max-w-5xl px-4 sm:px-6">
-          {/* About (short 3-line summary right after hero) */}
-          <section id="about" aria-labelledby="about-heading" className="py-10 border-b border-border">
-            <h2 id="about-heading" className="font-mono text-xs uppercase tracking-wider text-muted mb-2.5">
+          {/* About */}
+          <section id="about" aria-labelledby="about-heading" className="py-14 border-b border-border">
+            <h2
+              id="about-heading"
+              data-reveal
+              className="font-mono text-xs uppercase tracking-wider text-muted mb-4"
+            >
               About
             </h2>
-            <p className="max-w-3xl text-sm sm:text-base text-ink/90 leading-relaxed">
-              {PROFILE.about}
-            </p>
+            <div className="grid grid-cols-1 lg:grid-cols-[3fr_2fr] gap-8 items-start">
+              <p
+                data-reveal
+                className="max-w-[65ch] text-sm sm:text-base text-ink/90 leading-relaxed"
+              >
+                {PROFILE.about}
+              </p>
+
+              <aside
+                aria-label="At a glance"
+                data-reveal
+                data-reveal-delay={90}
+                className="w-full rounded-[16px] border border-border bg-surface p-6"
+              >
+                <h3 className="font-mono text-xs uppercase tracking-wider text-muted mb-4">
+                  At a glance
+                </h3>
+                <dl className="space-y-3 text-sm">
+                  <div className="flex items-baseline justify-between gap-4">
+                    <dt className="font-mono text-xs text-muted shrink-0">Location</dt>
+                    <dd className="text-right text-ink">Hyderabad, India</dd>
+                  </div>
+                  <div className="flex items-baseline justify-between gap-4">
+                    <dt className="font-mono text-xs text-muted shrink-0">Experience</dt>
+                    <dd className="text-right text-ink">3+ years, full-stack</dd>
+                  </div>
+                  <div className="flex items-baseline justify-between gap-4">
+                    <dt className="font-mono text-xs text-muted shrink-0">Current</dt>
+                    <dd className="text-right text-ink">
+                      AI in SDLC team, Accenture (since Feb 2026)
+                    </dd>
+                  </div>
+                  <div className="flex items-baseline justify-between gap-4">
+                    <dt className="font-mono text-xs text-muted shrink-0">Focus</dt>
+                    <dd className="text-right text-ink">RAG, MCP and tool-using agents</dd>
+                  </div>
+                </dl>
+              </aside>
+            </div>
           </section>
 
           {/* 2. Featured Projects */}

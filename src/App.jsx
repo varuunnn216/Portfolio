@@ -415,7 +415,7 @@ export default function App() {
             <div className="grid grid-cols-1 lg:grid-cols-[1fr_460px] gap-8 items-start">
               <p
                 data-reveal
-                className="max-w-[65ch] text-base sm:text-[17px] text-ink/90 leading-[1.85]"
+                className="max-w-[65ch] text-base sm:text-[17px] text-ink/90 leading-[1.7] lg:pb-10"
               >
                 {PROFILE.about}
               </p>
@@ -426,12 +426,12 @@ export default function App() {
                 data-reveal-delay={90}
                 className="w-full rounded-[16px] border border-border bg-surface overflow-hidden"
               >
-                <dl className="grid grid-cols-1 min-[560px]:grid-cols-2 auto-rows-fr gap-px bg-border">
+                <dl className="grid grid-cols-1 min-[560px]:grid-cols-2 auto-rows-auto content-start gap-px bg-border">
                   <div className="bg-surface p-5 flex flex-col justify-start">
                     <dt className="font-mono text-[11px] leading-none uppercase tracking-[0.06em] text-muted">
                       Location
                     </dt>
-                    <dd className="mt-4 text-[16px] font-semibold leading-snug text-ink">
+                    <dd className="mt-3 text-[16px] font-semibold leading-snug text-ink">
                       Hyderabad, India
                     </dd>
                   </div>
@@ -440,8 +440,8 @@ export default function App() {
                     <dt className="font-mono text-[11px] leading-none uppercase tracking-[0.06em] text-muted">
                       Experience
                     </dt>
-                    <dd className="mt-4 text-[16px] font-semibold leading-snug text-ink">
-                      3+ years, full-stack
+                    <dd className="mt-3 text-[16px] font-semibold leading-snug text-ink">
+                      3+ years, <span className="whitespace-nowrap">full-stack</span>
                     </dd>
                   </div>
 
@@ -449,7 +449,7 @@ export default function App() {
                     <dt className="font-mono text-[11px] leading-none uppercase tracking-[0.06em] text-muted">
                       Current
                     </dt>
-                    <dd className="mt-4 text-[16px] font-semibold leading-snug text-ink">
+                    <dd className="mt-3 text-[16px] font-semibold leading-snug text-ink">
                       AI in SDLC team, Accenture
                       <span className="block mt-1 text-xs font-normal text-muted">
                         since Feb 2026
@@ -461,8 +461,8 @@ export default function App() {
                     <dt className="font-mono text-[11px] leading-none uppercase tracking-[0.06em] text-muted">
                       Focus
                     </dt>
-                    <dd className="mt-4 text-[16px] font-semibold leading-snug text-ink">
-                      RAG, MCP and tool-using agents
+                    <dd className="mt-3 text-[16px] font-semibold leading-snug text-ink">
+                      RAG, MCP and <span className="whitespace-nowrap">tool-using</span> agents
                     </dd>
                   </div>
                 </dl>

@@ -12,6 +12,8 @@
   --color-muted: #a1a1aa;
   --color-accent: #e4e4e7;
   --spotlight-color: rgba(255, 255, 255, 0.06);
+  --glow-color: rgba(228, 228, 231, 0.045);
+  --line-pattern: rgba(255, 255, 255, 0.03);
   color-scheme: dark;
 }
 
@@ -24,6 +26,8 @@
   --color-muted: #52525b;
   --color-accent: #18181b;
   --spotlight-color: rgba(9, 9, 11, 0.045);
+  --glow-color: rgba(24, 24, 27, 0.04);
+  --line-pattern: rgba(9, 9, 11, 0.035);
   color-scheme: light;
 }
 
@@ -37,6 +41,8 @@
     --color-muted: #52525b;
     --color-accent: #18181b;
     --spotlight-color: rgba(9, 9, 11, 0.045);
+    --glow-color: rgba(24, 24, 27, 0.04);
+    --line-pattern: rgba(9, 9, 11, 0.035);
     color-scheme: light;
   }
 }
@@ -50,14 +56,56 @@ html {
 
 body {
   margin: 0;
+  position: relative;
   background-color: var(--color-bg);
   color: var(--color-text);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Subtle hero name entrance (keep opacity: 1 so LCP is immediate) */
-@keyframes hero-enter {
+/* Faint static noise overlay + scroll-linked radial glow (CSS only) */
+.page-ambient-glow {
+  background: radial-gradient(
+    680px circle at 50% calc(15% + var(--scroll-pct, 0) * 70%),
+    var(--glow-color),
+    transparent 70%
+  );
+}
+
+.page-noise-overlay {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='0.35'/%3E%3C/svg%3E");
+  opacity: 0.03;
+}
+
+/* Static hero fallback gradient + faint CSS line pattern */
+.hero-fallback-bg {
+  background-image:
+    radial-gradient(ellipse 80% 60% at 50% 20%, var(--glow-color), transparent 70%),
+    repeating-linear-gradient(
+      172deg,
+      transparent,
+      transparent 28px,
+      var(--line-pattern) 28px,
+      var(--line-pattern) 29px
+    );
+}
+
+/* Brief page load fade-in (no loading screen) */
+@keyframes page-fade {
+  from {
+    opacity: 0.94;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.page-fade-in {
+  animation: page-fade 0.35s ease-out both;
+}
+
+/* SplitText character settle (keep opacity: 1 so LCP is immediate) */
+@keyframes split-char-enter {
   from {
     transform: translateY(6px);
   }
@@ -66,8 +114,8 @@ body {
   }
 }
 
-.hero-name-animate {
-  animation: hero-enter 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+.split-char {
+  animation: split-char-enter 0.38s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 /* Scroll reveal: always readable, subtle entrance settle */
@@ -95,7 +143,7 @@ body {
   border-radius: inherit;
   pointer-events: none;
   opacity: 0;
-  transition: opacity 0.25s ease;
+  transition: opacity 0.2s ease;
   background: radial-gradient(
     520px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
     var(--spotlight-color),
@@ -107,11 +155,41 @@ body {
   opacity: 1;
 }
 
+/* Smooth accordion height animation */
+.accordion-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.24s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.accordion-content.is-open {
+  grid-template-rows: 1fr;
+}
+
+/* Subtle press ripple / tactile feedback */
+.btn-press {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.15s ease, opacity 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.btn-press:active {
+  transform: scale(0.98);
+}
+
+/* View Transitions API theme cross-fade */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.22s;
+  animation-timing-function: ease-in-out;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
-  .hero-name-animate {
+  .page-fade-in,
+  .split-char {
     animation: none;
   }
   .reveal-init,
@@ -122,5 +200,19 @@ body {
   }
   .spotlight-card::before {
     display: none;
+  }
+  .accordion-content {
+    transition: none;
+  }
+  .browser-tilt {
+    transform: none !important;
+    transition: none !important;
+  }
+  .btn-press:active {
+    transform: none;
+  }
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation-duration: 0.01s;
   }
 }

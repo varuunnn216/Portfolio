@@ -2,6 +2,9 @@ import fs from "node:fs";
 import path from "node:path";
 import { Resvg } from "@resvg/resvg-js";
 
+const siteUrl = (process.env.SITE_URL || process.env.VITE_SITE_URL || "https://varun-singh.vercel.app").replace(/\/$/, "");
+const siteHost = siteUrl.replace(/^https?:\/\//, "");
+
 const publicDir = path.resolve(process.cwd(), "public");
 fs.mkdirSync(publicDir, { recursive: true });
 
@@ -27,7 +30,7 @@ const ogSvg = `
   <!-- Top bar -->
   <circle cx="96" cy="100" r="6" fill="#22C55E" />
   <text x="116" y="106" fill="#A1A1AA" font-family="JetBrains Mono" font-size="18" font-weight="400">
-    varun-singh.vercel.app
+    ${siteHost}
   </text>
   <text x="1104" y="106" text-anchor="end" fill="#A1A1AA" font-family="JetBrains Mono" font-size="18" font-weight="400">
     HYDERABAD · AI ENGINEER / FDE
@@ -87,4 +90,17 @@ const fav32Resvg = new Resvg(faviconSvg, {
 });
 fs.writeFileSync(path.join(publicDir, "favicon-32x32.png"), fav32Resvg.render().asPng());
 
-console.log("Generated og-image.png, favicon.svg, favicon-32x32.png, apple-touch-icon.png");
+// 3. Generate robots.txt and sitemap.xml from SITE_URL
+fs.writeFileSync(
+  path.join(publicDir, "robots.txt"),
+  `User-agent: *\nAllow: /\n\nSitemap: ${siteUrl}/sitemap.xml\n`,
+  "utf-8"
+);
+
+fs.writeFileSync(
+  path.join(publicDir, "sitemap.xml"),
+  `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n  <url>\n    <loc>${siteUrl}/</loc>\n    <changefreq>monthly</changefreq>\n    <priority>1.0</priority>\n  </url>\n</urlset>\n`,
+  "utf-8"
+);
+
+console.log(`Generated assets for ${siteUrl}: og-image.png, favicons, robots.txt, sitemap.xml`);

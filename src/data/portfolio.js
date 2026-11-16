@@ -1,7 +1,7 @@
 import { EXPERIENCE_METRICS } from "./experienceMetrics";
 
 export const SITE_URL =
-  typeof __SITE_URL__ !== "undefined" ? __SITE_URL__ : "https://varun-singh.vercel.app";
+  typeof __SITE_URL__ !== "undefined" ? __SITE_URL__ : "https://varun-singh-portfolio.vercel.app";
 
 export const PROFILE = {
   name: "Varun Singh",

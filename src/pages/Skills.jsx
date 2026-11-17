@@ -29,7 +29,6 @@ export default function Skills() {
         "Python",
         "Java",
         "RESTful APIs",
-        "Microservices",
       ],
     },
     {
@@ -39,7 +38,6 @@ export default function Skills() {
       items: [
         "GitLab CI/CD",
         "Docker",
-        "AWS (S3, Lambda)",
         "Firebase",
         "Postman",
         "Git",

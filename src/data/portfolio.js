@@ -147,37 +147,58 @@ export const CERTIFICATIONS = [
 
 export const SKILL_GROUPS = [
   {
-    group: "AI & Agents",
+    group: "AI and Agents",
     items: [
-      "RAG (Hybrid RRF)",
-      "Cross-Encoder Reranking",
-      "MCP (Model Context Protocol)",
-      "Tool-Using Agents",
+      "AI agents",
+      "MCP",
+      "tool use",
+      "multi-step workflows",
+      "RAG (hybrid retrieval,\u00A0reranking)",
+      "prompt engineering",
+      "LLM APIs",
+      "evaluation harnesses",
       "Claude Code",
       "GitHub Copilot",
-      "Prompt & Eval Harnesses",
     ],
   },
   {
-    group: "Backend",
-    items: ["Python", "FastAPI", "Node.js", "TypeScript", "REST APIs", "Rust (Warp)"],
+    group: "Languages and Backend",
+    items: [
+      "Python",
+      "TypeScript",
+      "JavaScript",
+      "SQL",
+      "FastAPI",
+      "Node.js",
+      "REST APIs",
+      "Python integration\u00A0scripts",
+      "Rust (Warp)",
+    ],
   },
   {
     group: "Frontend",
-    items: ["React", "Next.js", "Angular", "JavaScript (ES6+)", "Tailwind CSS", "D3.js"],
+    items: ["React", "Angular", "Next.js", "Tailwind CSS", "D3.js", "HTML and CSS"],
   },
   {
-    group: "Data & Infra",
+    group: "Data and Tools",
     items: [
       "PostgreSQL",
       "pgvector",
-      "Redis",
-      "AWS",
       "Docker",
+      "Git",
       "GitLab CI/CD",
+      "Azure DevOps",
       "Vitest",
       "Playwright",
       "Vercel",
     ],
   },
+];
+
+export const DELIVERY_SKILLS = [
+  "requirements analysis",
+  "stakeholder communication",
+  "production support",
+  "root cause analysis",
+  "technical documentation",
 ];

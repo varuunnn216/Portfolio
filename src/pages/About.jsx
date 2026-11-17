@@ -85,8 +85,8 @@ export default function About() {
             {[
               "React.js", "Node.js", "Express.js", "MongoDB",
               "C#", "ASP.NET Core", "Docker", "GitLab CI/CD",
-              "AWS", "TypeScript", "Python", "SQL",
-              "System Design", "REST APIs", "Microservices", "Kubernetes",
+              "Git", "TypeScript", "Python", "SQL",
+              "System Design", "REST APIs", "PostgreSQL", "Kubernetes",
             ].map((skill) => (
               <div
                 key={skill}

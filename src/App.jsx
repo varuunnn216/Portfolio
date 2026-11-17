@@ -12,6 +12,7 @@ import {
 import {
   CERTIFICATIONS,
   COMPACT_PROJECTS,
+  DELIVERY_SKILLS,
   EDUCATION,
   EXPERIENCE,
   FEATURED_PROJECTS,
@@ -853,6 +854,26 @@ export default function App() {
                   </ul>
                 </div>
               ))}
+            </div>
+
+            <div
+              data-reveal
+              data-reveal-delay={280}
+              className="mt-5 rounded-xl border border-border bg-surface p-5 transition-colors duration-150 hover:border-muted/50"
+            >
+              <h3 className="font-mono text-xs uppercase tracking-wider text-muted mb-3">
+                Delivery
+              </h3>
+              <ul className="flex flex-wrap gap-2">
+                {DELIVERY_SKILLS.map((item) => (
+                  <li
+                    key={item}
+                    className="rounded-md border border-border bg-surface-2 px-2.5 py-1 text-xs text-ink/90 hover:text-ink transition-colors duration-150"
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
             </div>
           </section>
 

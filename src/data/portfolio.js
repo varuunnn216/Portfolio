@@ -81,9 +81,9 @@ export const SCIENTIFIC_PROJECT = {
     "Interactive chemical compound explorer with D3 visualizations and a FastAPI + PostgreSQL backend.",
   liveUrl: "https://scientific-dashboard-ui.vercel.app/",
   repoUrl: "https://github.com/varuunnn216/Scientific-Dashboard",
-  image: "/projects/scientific-explorer.webp",
+  image: "/projects/scientific-explorer-dark.webp",
   imageAlt:
-    "Scientific Compound Data Explorer dashboard showing compound metrics, molecular weight scatter plot, and binding affinity bar chart",
+    "Dark Scientific Compound Data Explorer dashboard showing compound metrics, molecular weight scatter plot, and binding affinity bar chart",
   tech: ["React", "TypeScript", "D3", "FastAPI", "PostgreSQL"],
 };
 

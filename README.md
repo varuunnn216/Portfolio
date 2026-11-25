@@ -88,4 +88,4 @@ Reach out: the.varun216@gmail.com
 
 ## License
 
-[MIT](LICENSE) © 2026 Varun Singh · See [CONTRIBUTING.md](CONTRIBUTING.md) and [SECURITY.md](SECURITY.md).
+[MIT](LICENSE) © 2026 Varun Singh · See [CONTRIBUTING.md](CONTRIBUTING.md), [SECURITY.md](SECURITY.md), and [CHANGELOG.md](CHANGELOG.md).

@@ -37,18 +37,14 @@ This portfolio is a reflection of my work, projects, and software engineering ph
 
 ## 📂 Folder Structure
 
+```text
 src/
-┣ 📁 assets/ # Images, icons, and static assets
-
-┣ 📁 components/ # Reusable UI components (Navbar, GradientBlinds, PillNav, etc.)
-
-┣ 📁 pages/ # Main app pages (About, Skills, Projects, Contact, ProfileSelect)
-
-┣ 📄 App.jsx # Main React component with routing
-
-┣ 📄 main.jsx # ReactDOM entry
-
-┗ 📄 index.css # Tailwind base + custom global styles
+├── components/   # Reusable UI components
+├── pages/        # Main portfolio pages
+├── App.jsx       # Main React component with routing
+├── main.jsx      # React entry point
+└── index.css     # Tailwind and global styles
+```
 
 ---
 
